@@ -1,199 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-ico">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-ico" />
     <title>Uncluttered.co</title>
 
     <!-- Meta Tags -->
-    <meta name="description" content="Uncluttered.co is a creative agency offering clean, professional video editing, photo retouching, and graphic design services to help brands stand out with clarity." />
-    <meta name="keywords" content="Uncluttered.co, video editing, photo editing, graphic design, creative agency, professional design, content creation, branding visuals" />
-    <meta property="og:title" content="Uncluttered.co | Creative Video, Photo & Design Services" />
-    <meta property="og:description" content="We specialize in clean, high-quality video editing, photo retouching, and graphic design. Let your brand shine with Uncluttered.co." />
+    <meta
+      name="description"
+      content="Uncluttered.co is a creative agency offering clean, professional video editing, photo retouching, and graphic design services to help brands stand out with clarity."
+    />
+    <meta
+      name="keywords"
+      content="Uncluttered.co, video editing, photo editing, graphic design, creative agency, professional design, content creation, branding visuals"
+    />
+    <meta
+      property="og:title"
+      content="Uncluttered.co | Creative Video, Photo & Design Services"
+    />
+    <meta
+      property="og:description"
+      content="We specialize in clean, high-quality video editing, photo retouching, and graphic design. Let your brand shine with Uncluttered.co."
+    />
     <meta property="og:url" content="https://www.uncluttered.co" />
     <meta property="og:type" content="website" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Include Font Awesome CDN in your -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(to right, #fdfbfb, #ebedee);
+        color: #1a1a1a;
+        overflow-x: hidden;
+      }
+
+      /* Navigation */
+      nav {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 700;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #000;
+        border-bottom: 2px solid #000;
+      }
+
+      /* Hero Section */
+      .container {
+        max-width: 1000px;
+        margin: 4rem auto;
+        padding: 2rem;
+        text-align: center;
+        animation: fadeIn 1.2s ease-in-out;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #444;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+      }
+
+      .cta-button {
+        padding: 0.8rem 2rem;
+        background-color: #111;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #333;
+      }
+
+      .site-footer {
+        background-color: #f8f8f8;
+        color: #555;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.95rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        border-top: 1px solid #ddd;
+      }
+
+      .site-footer i {
+        margin: 0 4px;
+        color: #777;
+      }
+
+      .site-footer strong {
+        color: #222;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
         }
 
-        body {
-            font-family: "Roboto", sans-serif;
-            background: linear-gradient(to right, #fdfbfb, #ebedee);
-            color: #1a1a1a;
-            overflow-x: hidden;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        /* Navigation */
-        nav {
-            background-color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-family: "Playfair Display", serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #000;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #000;
-            border-bottom: 2px solid #000;
-        }
-
-        /* Hero Section */
-        .container {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 2rem;
-            text-align: center;
-            animation: fadeIn 1.2s ease-in-out;
-        }
-
+      /* Responsive */
+      @media (max-width: 768px) {
         h1 {
-            font-family: "Playfair Display", serif;
-            font-size: 3rem;
-            font-weight: 600;
-            color: #000;
-            margin-bottom: 1rem;
+          font-size: 2.2rem;
         }
 
         p {
-            font-size: 1.2rem;
-            color: #444;
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
+          font-size: 1rem;
         }
 
-        .cta-button {
-            padding: 0.8rem 2rem;
-            background-color: #111;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
+        .nav-links {
+          flex-direction: column;
+          gap: 1rem;
+          background-color: #fff;
         }
 
-        .cta-button:hover {
-            background-color: #333;
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
         }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #888;
-            font-size: 0.85rem;
-            background-color: #f7f7f7;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-                background-color: #fff;
-            }
-
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <nav>
-        <a class="logo" href="#"><img src="./logo.png" alt="Uncluttered.co" style="height: 50px;"></a>
-        <!-- <a class="logo" href="#">Uncluttered.co</a> -->
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#work">Work</a>
-            <a href="#about">About Us</a>
-        </div>
+      <a class="logo" href="#"
+        ><img src="./logo.png" alt="Uncluttered.co" style="height: 50px"
+      /></a>
+      <!-- <a class="logo" href="#">Uncluttered.co</a> -->
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#work">Work</a>
+        <a href="#about">About Us</a>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="container">
-        <h1>Uncluttered.co</h1>
-        <p>
-            Uncluttered.co is a creative agency specializing in clean, high-quality
-            video editing, photo retouching, and graphic design that helps brands
-            stand out with clarity.
-        </p>
-        <a href="#get-started" class="cta-button">Get Started</a>
+      <h1>Uncluttered.co</h1>
+      <p>
+        Uncluttered.co is a creative agency specializing in clean, high-quality
+        video editing, photo retouching, and graphic design that helps brands
+        stand out with clarity.
+      </p>
+      <a href="#get-started" class="cta-button">Get Started</a>
     </div>
 
-    <!-- Footer -->
-    <footer>&copy; 2025 Uncluttered.co — All rights reserved.</footer>
+    <footer class="site-footer">
+      <p>
+        <i class="fa-regular fa-copyright"></i> 2025
+        <strong>Uncluttered.co</strong> — All rights reserved | Developed by
+        <i class="fa-solid fa-code"></i> <a href="https://www.instagram.com/iam.azhhar/" target="_blank" style="text-decoration: none; font-weight: 500; color: #222;">Azhar</a>
+      </p>
+    </footer>
 
     <!-- Google Tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5JSCREQC8"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z5JSCREQC8"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-Z5JSCREQC8");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Z5JSCREQC8");
     </script>
-</body>
-
+  </body>
 </html>
